@@ -1,0 +1,9 @@
+@use "sass:map";
+
+@function fs($font-size) {
+  @if map.has-key($font-sizes, $font-size) {
+    @return map.get($font-sizes, $font-size);
+  } @else {
+    @error '$font-sizes does not have that size!';
+  }
+}

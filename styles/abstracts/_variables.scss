@@ -1,0 +1,28 @@
+$colors: (
+  neutral: (
+    light: hsl(0, 0%, 100%),
+    normal: hsl(0, 0%, 50%),
+    dark: hsl(0, 0%, 0%),
+  ),
+  primary: (
+    light: hsl(195, 53%, 79%),
+    normal: hsl(240, 100%, 50%),
+    dark: hsl(240, 100%, 27%),
+  ),
+);
+
+$ff-sans: "Open Sans", sans-serif;
+
+$font-sizes: (
+  900: 9.375rem,
+  800: 6.25rem,
+  700: 3.5rem,
+  600: 2rem,
+  500: 1.75rem,
+  400: 1.125rem,
+  300: 1rem,
+  200: 0.875rem,
+);
+
+$fw-400: 400;
+$fw-700: 700;

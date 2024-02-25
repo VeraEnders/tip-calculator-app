@@ -1,0 +1,14 @@
+{
+  "name": "tip-calculator-app",
+  "version": "1.0.0",
+  "description": "Tip Calculator App aiding in calculating the correct tip and total bill cost per person",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch styles/main.scss style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.71.1"
+  }
+}
