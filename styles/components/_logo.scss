@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.logo {
+  margin-block: rem(50);
+  
+  @include md {
+    margin-top: rem(156);
+    margin-bottom: rem(88);
+  }
+
+  &__img {
+    margin-inline: auto;
+  }
+}

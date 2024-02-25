@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.calculator {
+  padding: rem(32) rem(24);
+  background-color: clr(neutral, white);
+  border-radius: rem(22);
+  font-weight: $fw-700;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: rem(32);
+
+  @include lg {
+    padding: rem(32);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(48);
+  }
+
+  &__inputs {
+    color: clr(clr-cyan, dark-grayish-1);
+  }
+
+  &__display {
+    padding: rem(24);
+    background-color: clr(clr-cyan, very-dark);
+    color: clr(clr-cyan, light-grayish-2);
+    border-radius: rem(14);
+
+    @include lg {
+      padding: rem(37);
+    }
+  }
+}

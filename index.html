@@ -4,10 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="image/png" sizes="32x32" rel="icon" href="./images/fav.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>Tip Calculator</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="logo">
+      <img class="logo__img" src="./images/logo.svg" alt="Logo">
+    </div>
+
+    <div class="calculator">
+      <section class="calculator__inputs">
+        <div class="inputs__bill">
+          <h4>Bill</h4>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="inputs__tip">
+          <h4>Select Tip %</h4>
+          <fieldset>
+            <label for="tip-5">
+              <input type="radio" id="tip-5" name="tip" value="5">
+              5%
+            </label>
+            <label for="tip-10">
+              <input type="radio" id="tip-10" name="tip" value="10">
+              10%
+            </label>
+            <label for="tip-15">
+              <input type="radio" id="tip-15" name="tip" value="15">
+              15%
+            </label>
+            <label for="tip-25">
+              <input type="radio" id="tip-25" name="tip" value="25">
+              25%
+            </label>
+            <label for="tip-50">
+              <input type="radio" id="tip-50" name="tip" value="50">
+              50%
+            </label>
+            <label for="tip-custom">
+              <input type="radio" id="tip-custom" name="tip" value="0">
+              Custom
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="inputs__people">
+          <h4>Number of People</h4>
+          <input type="number" placeholder="0">
+        </div>
+      </section>
+      <section class="calculator__display">
+        <div class="display__tip">
+          <h4>Tip Amount <span>/ person</span></h4>
+          <p>$0.00</p>
+        </div>
+        <div class="display__total">
+          <h4>Total <span>/ person</span></h4>
+          <p>$0.00</p>
+        </div>
+        <button>Reset</button>
+      </section>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,9 +1,23 @@
 @use "sass:map";
+@use "sass:math";
+@use "variables" as *;
 
 @function fs($font-size) {
   @if map.has-key($font-sizes, $font-size) {
     @return map.get($font-sizes, $font-size);
   } @else {
     @error '$font-sizes does not have that size!';
+  }
+}
+
+@function rem($size-in-px) {
+  @return math.div($size-in-px, 16) * 1rem; 
+}
+
+@function clr($color, $shade) {
+  @if map.has-key($colors, $color, $shade) {
+    @return map.get($colors, $color, $shade);
+  } @else {
+    @error '$colors does not have that color!';
   }
 }
