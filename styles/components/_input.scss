@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.input {
+  margin-top: rem(8);
+  padding: rem(3) rem(14);
+  width: 100%;
+  background-color: clr(clr-cyan, light-grayish-2);
+  background-repeat: no-repeat;
+  background-position: rem(16) center;
+  color: clr(clr-cyan, very-dark);
+  font-size: rem(26);
+  text-align: right;
+  border-radius: 5px;
+
+  &:focus {
+    outline: 3px solid clr(clr-cyan, strong);
+  }
+
+  &:invalid {
+    outline: 3px solid clr(clr-orange, normal);
+  }
+}
+
+.input__bill {
+  background-image: url("./images/icon-dollar.svg");
+}
+
+.input__people {
+  background-image: url("./images/icon-person.svg");
+}

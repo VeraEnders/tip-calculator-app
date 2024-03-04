@@ -51,6 +51,10 @@ select {
 	font: inherit;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 // remove animations for people who've turned them off
 @media (prefers-reduced-motion: reduce) {
   *,

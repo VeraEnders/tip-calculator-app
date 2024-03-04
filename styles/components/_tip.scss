@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+
+.tip {
+  margin-top: rem(32);
+  margin-bottom: rem(26);
+
+  @include md {
+    margin-block: rem(38);
+  }
+
+  &__options {
+    margin-block: rem(16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: rem(5);
+    row-gap: rem(14);
+  }
+
+  &__option {
+    cursor: pointer;
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked + .tip__label {
+        background-color: clr(clr-cyan, strong);
+        color: clr(clr-cyan, very-dark);
+      }
+    }
+
+    &--custom {
+      width: rem(146);
+
+      @include md {
+        width: rem(118);
+      }
+
+      input {
+        margin: 0;
+        padding-block: rem(10);
+        font-size: rem(20);
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    padding-block: rem(10);
+    width: rem(146);
+    background-color: clr(clr-cyan, very-dark);
+    color: clr(neutral, white);
+    border-radius: 5px;
+    font-size: rem(20);
+    text-align: center;
+
+    @include md {
+      width: rem(118);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: clr(clr-cyan, light-strong);
+        color: clr(clr-cyan, very-dark);
+      }
+    }
+  }
+}

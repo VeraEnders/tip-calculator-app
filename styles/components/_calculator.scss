@@ -1,7 +1,8 @@
 @use "../abstracts" as *;
 
 .calculator {
-  padding: rem(32) rem(24);
+  padding: rem(32);
+  max-width: rem(922);
   background-color: clr(neutral, white);
   border-radius: rem(22);
   font-weight: $fw-700;
@@ -9,14 +10,17 @@
   grid-template-columns: 1fr;
   row-gap: rem(32);
 
-  @include lg {
-    padding: rem(32);
+  @include md {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: rem(48);
+    column-gap: rem(28);
   }
 
   &__inputs {
     color: clr(clr-cyan, dark-grayish-1);
+
+    @include md {
+      padding: rem(16);
+    }
   }
 
   &__display {
@@ -30,3 +34,4 @@
     }
   }
 }
+

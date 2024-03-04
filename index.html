@@ -18,43 +18,47 @@
 
     <div class="calculator">
       <section class="calculator__inputs">
-        <div class="inputs__bill">
+        <div class="bill">
           <h4>Bill</h4>
-          <input type="number" placeholder="0">
+          <input class="input input__bill" type="number" placeholder="0">
         </div>
-        <div class="inputs__tip">
+        <div class="tip">
           <h4>Select Tip %</h4>
-          <fieldset>
-            <label for="tip-5">
+          <fieldset class="tip__options">
+            <div class="tip__option">
               <input type="radio" id="tip-5" name="tip" value="5">
-              5%
-            </label>
-            <label for="tip-10">
+              <label class="tip__label" for="tip-5">5%</label>
+            </div>
+
+            <div class="tip__option">
               <input type="radio" id="tip-10" name="tip" value="10">
-              10%
-            </label>
-            <label for="tip-15">
+              <label class="tip__label" for="tip-10">10%</label>
+            </div>
+            
+            <div class="tip__option">
               <input type="radio" id="tip-15" name="tip" value="15">
-              15%
-            </label>
-            <label for="tip-25">
+              <label class="tip__label" for="tip-15">15%</label>
+            </div>
+
+            <div class="tip__option">
               <input type="radio" id="tip-25" name="tip" value="25">
-              25%
-            </label>
-            <label for="tip-50">
+              <label class="tip__label" for="tip-25">25%</label>
+            </div>
+
+            <div class="tip__option">
               <input type="radio" id="tip-50" name="tip" value="50">
-              50%
-            </label>
-            <label for="tip-custom">
-              <input type="radio" id="tip-custom" name="tip" value="0">
-              Custom
-            </label>
+              <label class="tip__label" for="tip-50">50%</label>
+            </div>
+
+            <div class="tip__option--custom">
+              <input class="input" type="number" id="tip-custom" name="tip" placeholder="Custom">
+            </div>
 
           </fieldset>
         </div>
-        <div class="inputs__people">
+        <div class="people">
           <h4>Number of People</h4>
-          <input type="number" placeholder="0">
+          <input class="input input__people" type="number" placeholder="0" min="1">
         </div>
       </section>
       <section class="calculator__display">
