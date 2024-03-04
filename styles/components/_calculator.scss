@@ -1,21 +1,24 @@
 @use "../abstracts" as *;
 
 .calculator {
-  padding: rem(32);
+  padding: rem(32) rem(24);
   max-width: rem(922);
   background-color: clr(neutral, white);
-  border-radius: rem(22);
+  border-radius: rem(22) rem(22) 0 0;
   font-weight: $fw-700;
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: rem(32);
+  row-gap: rem(36);
 
   @include md {
     grid-template-columns: repeat(2, 1fr);
     column-gap: rem(28);
+    padding: rem(32);
+    border-radius: rem(22);
   }
 
   &__inputs {
+    padding-inline: rem(8);
     color: clr(clr-cyan, dark-grayish-1);
 
     @include md {
@@ -23,14 +26,42 @@
     }
   }
 
-  &__display {
-    padding: rem(24);
+  &__displays {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: rem(28) rem(24) rem(22);
     background-color: clr(clr-cyan, very-dark);
     color: clr(clr-cyan, light-grayish-2);
     border-radius: rem(14);
 
     @include lg {
-      padding: rem(37);
+      padding: rem(40);
+    }
+
+    &__btn {
+      width: 100%;
+      margin-top: rem(12);
+      padding-block: rem(10);
+      background-color: clr(clr-cyan, strong);
+      color: clr(clr-cyan, very-dark);
+      text-transform: uppercase;
+      font-size: rem(20);
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: clr(clr-cyan, light-strong);
+      }
+
+      &:disabled {
+        cursor: auto;
+        opacity: 0.4;
+
+        &:hover {
+          background-color: clr(clr-cyan, strong);
+        }
+      }
     }
   }
 }

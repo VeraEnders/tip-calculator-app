@@ -1,8 +1,7 @@
 @use "../abstracts" as *;
 
 .tip {
-  margin-top: rem(32);
-  margin-bottom: rem(26);
+  margin-block: rem(32);
 
   @include md {
     margin-block: rem(38);
